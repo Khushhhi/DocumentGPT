@@ -25,5 +25,5 @@ flask --app <filename> run
 ```
 
 ## Current Functionalities 
-1. Let's the user upload a .pdf or .txt file
+1. Lets the user upload a .pdf or .txt file
 2. Returns the text output in json format
