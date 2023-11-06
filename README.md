@@ -5,11 +5,11 @@ DocumentGPT is an AI-powered document analysis and summarization tool designed t
 To run, create a Python virtual environment (venv) by running:
 
 ```
-python3 -m venv <venv-name>
+python3 -m venv .flaskenv
 ```
 and activate it by running 
 ```
-source bin/<venv-name>/activate
+. .flaskenv/bin/activate 
 ```
 
 Now, install flask using: (Flask installation docs - https://flask.palletsprojects.com/en/3.0.x/installation/)
