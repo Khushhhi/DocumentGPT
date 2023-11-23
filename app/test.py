@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify 
+from flask import Flask, request, jsonify, render_template 
 from flask_cors import CORS #for handling cross-origin requests
 from PyPDF2 import PdfReader #for reading texts from pdfs
 import io 
@@ -10,19 +10,7 @@ CORS(app) #allows browser to permit requests from specified origins.
 @app.route('/', methods=['POST', 'GET'])
 def upload():
     if request.method == 'GET':
-        return '''
-        <html>
-            <body>
-				<div style='border: bold;'>
-					<form action="/" method="post" enctype="multipart/form-data">
-						Select a .pdf or .txt file to upload:
-						<input type="file" name="file"><br><br>
-						<input type="submit" value="Upload">
-					</form>
-                </div>
-            </body>
-        </html>
-        '''
+        return render_template("upload.html")
 
     file = request.files.get('file')
 
